@@ -1,8 +1,5 @@
-def get_input():
-	with open("input.txt") as f:
-		return [int(line.strip()) for line in f.readlines()]
-	
-	
+from common import *
+
 def find_result(numbers):
 	wanted_numbers = set()
 	for n in numbers:
