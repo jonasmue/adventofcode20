@@ -1,7 +1,7 @@
 from common import *
 
 def find_result(numbers):
-	# Classic 3-sum problem
+	# 3-sum in O(n^2) time and O(1) space
 	numbers = sorted(numbers)
 	for i, first in enumerate(numbers):
 		l = i + 1
@@ -11,8 +11,8 @@ def find_result(numbers):
 			right = numbers[r]
 			
 			sum = first + left + right
-			if sum == 2020: return first * left * right
-			elif sum < 2020: l += 1
+			if sum == TARGET: return first * left * right
+			elif sum < TARGET: l += 1
 			else: r -= 1
 		
 

@@ -1,9 +1,10 @@
 from common import *
 
 def find_result(numbers):
+	# 2-sum in O(n) time and space
 	wanted_numbers = set()
 	for n in numbers:
-		delta = 2020 - n
+		delta = TARGET - n
 		if n in wanted_numbers:
 			return n * delta
 		wanted_numbers.add(delta)
