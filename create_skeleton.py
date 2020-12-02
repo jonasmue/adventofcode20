@@ -2,7 +2,8 @@ import os
 
 SKELETON_FILES = ["part1.py", "part2.py", "common.py", "input.txt", "README.md"]
 
-current_day = int(sorted([file for file in os.listdir() if "day" in file])[-1][-2:])
+days = sorted([file for file in os.listdir() if "day" in file])
+current_day = 0 if not len(days) else int(days[-1][-2:])
 next_day = current_day + 1
 next_day_str = "day"
 next_day_str += "0{}".format(next_day) if next_day < 10 else str(next_day)
