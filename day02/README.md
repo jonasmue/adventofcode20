@@ -32,9 +32,9 @@ Each policy actually describes two **positions in the password**, where `1` mean
 
 Given the same example list from above:
 
-`1-3 a: **a**bcde` is **valid**: position `1` contains `a` and position `3` does not.
-`1-3 b: **c**d**e**fg` is **invalid**: neither position `1` nor position `3` contains `b`.
-`2-9 c: c**c**cccccc**c**` is **invalid**: both position `2` and position `9` contain `c`.
+<pre>1-3 a: <b>a</b>b<b>c</b>de</pre> is **valid**: position `1` contains `a` and position `3` does not.
+<pre>1-3 b: <b>c</b>d<b>e</b>fg</pre> is **invalid**: neither position `1` nor position `3` contains `b`.
+<pre>2-9 c: c<b>c</b>cccccc<b>c</b></pre> is **invalid**: both position `2` and position `9` contain `c`.
 
 How many passwords are valid according to the new interpretation of the policies?
 
