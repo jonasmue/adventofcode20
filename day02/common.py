@@ -9,10 +9,7 @@ class PasswordPolicy:
 		
 		
 def count_valid(policyFunction):
-	valid_count = 0
-	for policy, password in get_input():
-		if policyFunction(policy, password): valid_count += 1
-	return valid_count
+	return sum(map(policyFunction, get_input()))
 
 
 def get_input():

@@ -1,7 +1,8 @@
 from common import count_valid
 
-def policy_function(policy, password):
+def policy_function(policyTuple):
 	# O(n) time and O(1) space
+	policy, password = policyTuple
 	if len(password) < policy.secondValue: return False
 	match_first = password[policy.firstValue - 1] == policy.character
 	match_second = password[policy.secondValue - 1] == policy.character
