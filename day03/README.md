@@ -40,7 +40,7 @@ The toboggan can only follow a few specific slopes (you opted for a cheaper mode
 
 From your starting position at the top-left, check the position that is right 3 and down 1. Then, check the position that is right 3 and down 1 from there, and so on until you go past the bottom of the map.
 
-The locations you'd check in the above example are marked here with O where there was an open square and X where there was a tree:
+The locations you'd check in the above example are marked here with `O` where there was an open square and `X` where there was a tree:
 
 ```
 ..##.........##.........##.........##.........##.........##.......  --->
