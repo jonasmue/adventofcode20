@@ -1,6 +1,5 @@
 TREE_CHARACTER = "#"
 
-
 def trees_for_slope(slope, map):
   trees = 0
   if not len(map): return trees
