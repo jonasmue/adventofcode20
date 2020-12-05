@@ -1,4 +1,4 @@
-def to_binary(code, one_char):
+def to_number(code, one_char):
   result = 0
   for char in code:
     result = result << 1
@@ -7,12 +7,12 @@ def to_binary(code, one_char):
 
 def get_col(code):
   col_code = code[7:]
-  col = to_binary(col_code, "R")
+  col = to_number(col_code, "R")
   return col
   
 def get_row(code):
   row_code = code[:7]
-  row = to_binary(row_code, "B")
+  row = to_number(row_code, "B")
   return row
 
 def get_seat_id(code):
