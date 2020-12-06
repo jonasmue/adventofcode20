@@ -1,7 +1,7 @@
 from common import get_input
 
 def union_count():
-  # O(n*a) time and O(n) space
+  # O(n*a) time and space
   # with n: number of passengers, a: longest answer set
   return sum([len(set.union(*group)) for group in get_input()])
   
