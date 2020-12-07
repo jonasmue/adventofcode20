@@ -2,11 +2,11 @@ from common import get_input
 
 
 def potential_containers():
-    # O(n) time and space
-    # with n: number of rules (bag types) → we visit each rule at most once
     luggage_rules = get_input()
 
     def traverse(key="shiny gold", visited=None):
+        # O(n) time and space
+        # with n: number of rules (bag types) → we visit each rule at most once
         if visited is None: visited = set()
         total = 0
         for container in luggage_rules.keys():
