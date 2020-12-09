@@ -4,7 +4,7 @@ from common import first_invalid, get_input
 def encryption_weakness():
     invalid = first_invalid()
     
-    # Complexity we don't consider part 1 (previous line):
+    # Complexity if we don't consider part 1 (previous line):
     # O(n+c) time and O(1) space
     # with n: length of input, c: length of contiguous sequence
     
