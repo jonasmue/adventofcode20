@@ -6,7 +6,7 @@ def run_instructions(instructions):
     current_position = [0, 0]
     current_waypoint = [10, 1]
     
-    for item in get_input():
+    for item in instructions:
         operation = item[0]
         arg = item[1]
         if operation in HEADINGS:
