@@ -18,7 +18,7 @@ def run_instructions(instructions):
             current_heading = HEADINGS[next_heading_idx]
         elif operation == "R":
             next_heading_idx = HEADINGS.index(current_heading) + (arg // 90)
-            current_heading= HEADINGS[next_heading_idx % len(HEADINGS)]
+            current_heading = HEADINGS[next_heading_idx % len(HEADINGS)]
             
     return current_position
             

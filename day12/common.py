@@ -3,10 +3,7 @@ HEADINGS = ["N", "E", "S", "W"]
 
 def get_input():
     with open("input.txt") as f:
-        instructions = []
-        for line in f.read().splitlines():
-            instructions.append((line[0], int(line[1:])))
-        return instructions        
+        return [(line[0], int(line[1:])) for line in f.read().splitlines()]     
         
 
 def move(point, direction, steps):
