@@ -1,5 +1,3 @@
-from functools import reduce
-
 def get_input():
     with open("input.txt") as f:
         lines = f.read().splitlines()
