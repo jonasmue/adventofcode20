@@ -10,33 +10,6 @@ def possible_columns(range_list, tickets):
     return cols - impossible
     
 
-def csp(field2col):
-    
-    removed_cols = set()
-    
-    def is_complete():
-        for v in field2col.values():
-            if len(v) > 1: return False
-        return True
-        
-    def recurse():
-        # Recursively remove all impossible columns from set of possible columns
-        if is_complete(): return
-        for field, cols in field2col.items():
-            if len(cols) == 1:
-                col = next(iter(cols))
-                if col in removed_cols:
-                    continue
-                for other_field, other_cols in field2col.items():
-                    if other_field == field: continue
-                    if col in other_cols:
-                        other_cols.remove(col)
-                removed_cols.add(col)   
-        recurse()  
-    
-    recurse()
-
-
 def assign_fields(fields, nearby_tickets):
     tickets, _ = valid_tickets(fields, nearby_tickets)
     field2col = {}
