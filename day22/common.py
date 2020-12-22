@@ -29,7 +29,7 @@ def play_game(player_1, player_2, recursive=False):
         if recursive and card_1 <= l_1 and card_2 <= l_2:
             p1 = deque(list(player_1)[:card_1])
             p2 = deque(list(player_2)[:card_2])
-            if play_game(p1, p2)[0] == 0:
+            if play_game(p1, p2, True)[0] == 0:
                 player_1.extend([card_1, card_2])
             else:
                 player_2.extend([card_2, card_1])
